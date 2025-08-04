@@ -107,7 +107,7 @@ AS LANGUAGE JAVA NAME 'Scaler.rescale(oracle.sql.BLOB, int, int, java.lang.Strin
 
 
 /*
-
+Procedure for scaling given images
 */
 
 
@@ -127,19 +127,3 @@ BEGIN
   insert into ams_media (medium_content) values (l_newimg);
   
 END;
-
-
-/*
-Select all images
-*/
-
-
-select * from ams_media;
-
-
-/*
-Delete test images
-*/
-
-
-delete from ams_media where application_id is null;
